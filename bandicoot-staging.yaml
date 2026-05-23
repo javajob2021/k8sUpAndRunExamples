@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bandicoot-staging
+  labels:
+    app: bandicoot
+    ver: "2"
+    env: staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bandicoot
+      ver: "2"
+      env: staging
+  template:
+    metadata:
+      labels:
+        app: bandicoot
+        ver: "2"
+        env: staging
+    spec:
+      containers:
+        - image: ralphkube/kuard-amd64:green
+          name: kuard
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP

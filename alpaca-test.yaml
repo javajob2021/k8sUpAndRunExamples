@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alpaca-test
+  labels:
+    app: alpaca
+    ver: "2"
+    env: test
+    canary: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alpaca
+      ver: "2"
+      env: test
+  template:
+    metadata:
+      labels:
+        app: alpaca
+        ver: "2"
+        env: test
+    spec:
+      containers:
+        - image: ralphkube/kuard-amd64:green
+          name: kuard
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
