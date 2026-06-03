@@ -21,7 +21,7 @@ spec:
         env: staging
     spec:
       containers:
-        - image: ralphkube/kuard-amd64:green
+        - image: ralphkube/kuard-amd64:blue
           name: kuard
           ports:
             - containerPort: 8080

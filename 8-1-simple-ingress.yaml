@@ -5,6 +5,6 @@ metadata:
 spec:
   defaultBackend:
     service:
-      name: alpaca
+      name: alpaca-prod
       port:
         number: 8080

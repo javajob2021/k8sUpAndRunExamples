@@ -5,7 +5,7 @@ metadata:
 spec:
   defaultBackend:
     service:
-      name: be-default
+      name: alpaca-test
       port:
         number: 8080
   rules:
@@ -16,6 +16,6 @@ spec:
         path: /
         backend:
           service:
-            name: alpaca
+            name: alpaca-test
             port:
               number: 8080

@@ -6,7 +6,7 @@ metadata:
     version: "2"
   name: kuard
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: kuard
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: kuard
-          image: "gcr.io/kuar-demo/kuard-amd64:green"
+          image: "ralphkube/kuard-amd64:green"
           resources:
             requests:
               cpu: "500m"

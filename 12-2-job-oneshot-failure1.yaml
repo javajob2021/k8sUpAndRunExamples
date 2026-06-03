@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: kuard
-        image: gcr.io/kuar-demo/kuard-amd64:blue
+        image: ralphkube/kuard-amd64:blue
         imagePullPolicy: Always
         command:
         - "/kuard"
@@ -21,4 +21,4 @@ spec:
         - "--keygen-exit-on-complete"
         - "--keygen-exit-code=1"
         - "--keygen-num-to-gen=3"
-      restartPolicy: OnFailure
+      restartPolicy: Never

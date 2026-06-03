@@ -11,13 +11,13 @@ spec:
         path: "/"
         backend:
           service:
-            name: bandicoot
+            name: bandicoot-prod
             port:
               number: 8080
       - pathType: Prefix
         path: "/a/"
         backend:
           service:
-            name: alpaca
+            name: alpaca-prod
             port:
               number: 8080
